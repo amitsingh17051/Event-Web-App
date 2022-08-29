@@ -1,5 +1,7 @@
 <?php
 use App\Http\Controllers\Api\PostController;
+use App\Http\Controllers\Api\HosterController;
+use App\Http\Controllers\Api\CategoryController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -20,3 +22,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 // Posts Routes
 Route::apiResource('posts', PostController::class);
+
+// Hoster Routes
+Route::apiResource('hoster', HosterController::class);
+
+
+Route::apiResource('category', CategoryController::class);
